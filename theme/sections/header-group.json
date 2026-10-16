@@ -1,0 +1,173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "icon": "plant",
+            "text": "50% OFF skincare - Enter code SKNWKN",
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "",
+            "countdown-enabled": true,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "DD-MM-YYYY",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": true
+          }
+        }
+      },
+      "block_order": [
+        "announcement"
+      ],
+      "settings": {
+        "border": "none",
+        "background-color": "accent-2",
+        "sticky-enabled": false,
+        "arrows-enabled": true,
+        "rotate-frequency": 7,
+        "show-social-icons": true,
+        "show-region-selector": true,
+        "show-locale-selector": true,
+        "text-color": "body",
+        "scroll-text": true,
+        "animation-speed": 3
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "image_JkY3Hr": {
+          "type": "image",
+          "settings": {
+            "menu-item": "",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Description",
+            "link-url": "",
+            "mobile-image-display-type": "original",
+            "mobile-aspect-ratio": 134
+          }
+        }
+      },
+      "block_order": [
+        "image_JkY3Hr"
+      ],
+      "settings": {
+        "layout": "center-left",
+        "background-color": "none",
+        "sidebar-width": 244,
+        "white-menu-background": true,
+        "bottom-border": false,
+        "text-color": "body",
+        "hover-disabled": false,
+        "sticky-enabled": true,
+        "hide-on-scroll": true,
+        "reduce-height": true,
+        "overlap-behavior": "drawer",
+        "logo": "shopify://shop_images/moonflower-blck.png",
+        "logo-height": 32,
+        "mobile-logo-height": 22,
+        "transparent-enabled": false,
+        "transparent-text-color": "white",
+        "menu": "main-menu",
+        "show-region-selector": true,
+        "show-locale-selector": true,
+        "search-enabled": true,
+        "icons-enabled": true,
+        "highlight-item": "",
+        "highlight-color": "#ffe379",
+        "modal-item": "",
+        "modal-content": "",
+        "modal-background-color": "none",
+        "modal-text-color": "body"
+      }
+    },
+    "split-announcements": {
+      "type": "split-announcements",
+      "blocks": {
+        "store-message-1": {
+          "type": "store-message",
+          "settings": {
+            "icon": "none",
+            "heading": "Heading",
+            "description": "Description",
+            "link-url": ""
+          }
+        },
+        "store-message-2": {
+          "type": "store-message",
+          "settings": {
+            "icon": "none",
+            "heading": "Heading",
+            "description": "Description",
+            "link-url": ""
+          }
+        },
+        "store-message-3": {
+          "type": "store-message",
+          "settings": {
+            "icon": "none",
+            "heading": "Heading",
+            "description": "Description",
+            "link-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "store-message-1",
+        "store-message-2",
+        "store-message-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "home-page-only": true,
+        "border": "none",
+        "background-color": "none",
+        "text-color": "body",
+        "icon": "none",
+        "heading": "Heading",
+        "description": "Description",
+        "link-url": ""
+      }
+    },
+    "divider_MUWecf": {
+      "type": "divider",
+      "name": "Divider",
+      "settings": {
+        "border-enabled": false,
+        "white-border": false,
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "5",
+        "background-color": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header",
+    "split-announcements",
+    "divider_MUWecf"
+  ]
+}
