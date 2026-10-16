@@ -9,7 +9,9 @@
      del formulario de Mailchimp (Audience → Signup forms → Form builder / Landing page)
      que entrega el código de 20%.
   3. Links de "Pedir" usan mailto:hola@materia.com. Cambiar si los pedidos van a otro canal.
-  4. Opcional: reemplazar los wordmarks de texto por imágenes PNG exportadas de Figma
+  4. Fotos: los espacios usan imágenes de muestra (placehold.co). En Mailchimp haz clic en cada
+     imagen → Replace, o cambia el src. Tamaños: principal 1280×760, tarjetas 524×400, par 524×640.
+  5. Opcional: reemplazar los wordmarks de texto por imágenes PNG exportadas de Figma
      (página Newsletter → capas "wordmark") para usar la tipografía PP Migra exacta.
 -->
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -42,6 +44,7 @@
     .px{padding-left:22px!important;padding-right:22px!important;}
     .col{display:block!important;width:100%!important;max-width:100%!important;}
     .col-pad{padding:0 0 28px 0!important;}
+    .col img{max-width:100%!important;width:100%!important;}
     .hero-h{font-size:46px!important;line-height:48px!important;}
     .h2{font-size:32px!important;line-height:36px!important;}
     .wm{font-size:34px!important;}
@@ -77,6 +80,9 @@
     </div>
   </td></tr>
 
+  <!-- Foto principal · 1 columna (1280×760 px, se muestra a 640) -->
+  <tr><td style="padding:32px 0 0;" bgcolor="#F1EFE8"><img mc:edit="foto_hero" src="https://placehold.co/1280x760/D8C3A0/234A28/png?text=Foto+principal+1280x760" width="640" alt="La finca en Aibonito" style="display:block;width:100%;max-width:640px;height:auto;border:0;background:#D8C3A0;color:#234A28;font-family:Arial,sans-serif;font-size:13px;"></td></tr>
+
   <!-- Hero · 1 columna -->
   <tr><td class="px" style="padding:40px 48px 44px;" mc:edit="hero">
     <p class="sans" style="margin:0 0 18px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#5F7A4C;">Una nueva etapa</p>
@@ -90,7 +96,7 @@
     <!--[if mso]><table role="presentation" width="544" cellpadding="0" cellspacing="0" border="0"><tr><td width="272" valign="top"><![endif]-->
     <div class="col" style="display:inline-block;width:100%;max-width:272px;vertical-align:top;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="col-pad" style="padding:0 10px 0 0;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#5F7A4C;"><tr><td style="padding:28px 24px 30px;" mc:edit="col_trama">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#5F7A4C;"><tr><td><img mc:edit="foto_trama" src="https://placehold.co/524x400/D8C3A0/234A28/png?text=Foto+Trama" width="262" alt="Algodón cosechado en la finca" style="display:block;width:100%;max-width:262px;height:auto;border:0;background:#D8C3A0;color:#234A28;font-family:Arial,sans-serif;font-size:13px;"></td></tr><tr><td style="padding:28px 24px 30px;" mc:edit="col_trama">
           <div class="serif" style="font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:44px;color:#F1EFE8;letter-spacing:-1px;">trama</div>
           <p class="sans" style="margin:10px 0 14px;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#A6C48C;">Soberanía material</p>
           <p class="sans" style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:23px;color:#F1EFE8;">Fibras, tintes naturales, flores y talleres. Del algodón al hilo, del índigo al color.</p>
@@ -100,7 +106,7 @@
     <!--[if mso]></td><td width="272" valign="top"><![endif]-->
     <div class="col" style="display:inline-block;width:100%;max-width:272px;vertical-align:top;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="col-pad" style="padding:0 0 0 10px;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#234A28;"><tr><td style="padding:28px 24px 30px;" mc:edit="col_tresvidas">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#234A28;"><tr><td><img mc:edit="foto_tresvidas" src="https://placehold.co/524x400/D8C3A0/234A28/png?text=Foto+Tres+Vidas" width="262" alt="Cosecha de temporada" style="display:block;width:100%;max-width:262px;height:auto;border:0;background:#D8C3A0;color:#234A28;font-family:Arial,sans-serif;font-size:13px;"></td></tr><tr><td style="padding:28px 24px 30px;" mc:edit="col_tresvidas">
           <div class="serif" style="font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:44px;color:#A6C48C;letter-spacing:-1px;">tres vidas</div>
           <p class="sans" style="margin:10px 0 14px;font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#A6C48C;">Soberanía alimentaria</p>
           <p class="sans" style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;line-height:23px;color:#F1EFE8;">Cosecha de temporada, flores, rollitos de fruta y mercados. De la finca a tu mesa.</p>
@@ -196,6 +202,15 @@
         </tr></table>
       </td></tr>
     </table>
+  </td></tr>
+
+  <!-- Fotos · 2 columnas (524×640 px cada una) -->
+  <tr><td class="px" style="padding:0 48px 48px;font-size:0;">
+    <!--[if mso]><table role="presentation" width="544" cellpadding="0" cellspacing="0" border="0"><tr><td width="272" valign="top"><![endif]-->
+    <div class="col" style="display:inline-block;width:100%;max-width:272px;vertical-align:top;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="col-pad" style="padding:0 10px 0 0;"><img mc:edit="foto_mercado_1" src="https://placehold.co/524x640/D8C3A0/234A28/png?text=Foto+mercado+1" width="262" alt="Flores de la finca en el mercado" style="display:block;width:100%;max-width:262px;height:auto;border:0;background:#D8C3A0;color:#234A28;font-family:Arial,sans-serif;font-size:13px;"></td></tr></table></div>
+    <!--[if mso]></td><td width="272" valign="top"><![endif]-->
+    <div class="col" style="display:inline-block;width:100%;max-width:272px;vertical-align:top;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="col-pad" style="padding:0 0 0 10px;"><img mc:edit="foto_mercado_2" src="https://placehold.co/524x640/D8C3A0/234A28/png?text=Foto+mercado+2" width="262" alt="Comunidad en el mercado" style="display:block;width:100%;max-width:262px;height:auto;border:0;background:#D8C3A0;color:#234A28;font-family:Arial,sans-serif;font-size:13px;"></td></tr></table></div>
+    <!--[if mso]></td></tr></table><![endif]-->
   </td></tr>
 
   <!-- Próximamente website · 1 columna -->
