@@ -1,10 +1,11 @@
 <!-- snippets/custom-styles.liquid -->
 
 {%- doc -%}
-  Moonflower design layer (assets/mf.css) + soft scroll reveal for .mf-reveal elements.
+  Moonflower design layer (assets/mf.css, assets/mf-nav.css) + soft scroll reveal for .mf-reveal elements.
 {%- enddoc -%}
 
 {{ 'mf.css' | asset_url | stylesheet_tag }}
+{{ 'mf-nav.css' | asset_url | stylesheet_tag }}
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

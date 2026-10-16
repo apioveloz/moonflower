@@ -412,17 +412,39 @@
 
 <element-relocator data-move-into=".mobile-nav--menu" data-mq="none">
   {%-
-    render 'y-menu',
-    id: 'mobile-nav',
+    render 'mf-drawer-menu',
     menu: menu,
     blocks: section.blocks,
-    highlight_color: highlight_color,
     highlight_item: highlight_item,
-    hover_disabled: hover_disabled,
-    inside_drawer: true,
     modal_item: modal_item
   -%}
 </element-relocator>
+
+{%- liquid
+  assign drawer_footer_menu = section.settings.drawer-footer-menu
+  assign show_drawer_account = false
+  if shop.customer_accounts_enabled and show_icons
+    assign show_drawer_account = true
+  endif
+-%}
+
+{%- if show_drawer_account or linklists[drawer_footer_menu].links != blank -%}
+  <element-relocator data-move-into=".mobile-nav--links" data-mq="none">
+    {%- if show_drawer_account -%}
+      <li>
+        <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}">
+          {{- account_t -}}
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- for link in linklists[drawer_footer_menu].links -%}
+      <li>
+        <a href="{{ link.url }}">{{- link.title -}}</a>
+      </li>
+    {%- endfor -%}
+  </element-relocator>
+{%- endif -%}
 
 {%- if locale_enabled or region_enabled -%}
   <element-relocator data-move-into=".mobile-nav--localization" data-mq="none">
@@ -678,6 +700,12 @@
       "default": "main-menu"
     },
     {
+      "type": "link_list",
+      "id": "drawer-footer-menu",
+      "label": "Mobile drawer footer links",
+      "info": "Small links shown under Account at the bottom of the mobile menu, e.g. Journal, Stockists, FAQ."
+    },
+    {
       "type": "checkbox",
       "id": "show-region-selector",
       "label": "Show country/region selector",
@@ -774,7 +802,8 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "Image",
+          "info": "Optional when the link below is a collection: its image is used."
         },
         {
           "id": "image-display-type",

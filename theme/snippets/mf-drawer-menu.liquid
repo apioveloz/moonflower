@@ -1,0 +1,272 @@
+<!-- snippets/mf-drawer-menu.liquid -->
+
+{%- doc -%}
+  Moonflower drawer navigation. Top-level links slide into sub-panels
+  (links + the header's image blocks as promo tiles) instead of expanding
+  in place. Styles live in assets/mf-nav.css.
+  @param {string} menu - Navigation menu handle.
+  @param {object[]} [blocks] - Header section blocks; image blocks become promo tiles.
+  @param {string} [highlight_item] - Handle of the top-level item to underline.
+  @param {string} [modal_item] - Handle of the top-level item that opens the header modal.
+{%- enddoc -%}
+
+{%- liquid
+  assign back_t = 'layout.header.back' | t
+  assign view_all_t = 'general.search.view_all' | t
+  assign root_items = ''
+  assign panels = ''
+-%}
+
+{%- for link_1 in linklists[menu].links -%}
+  {%- liquid
+    assign handle_1 = link_1.handle | handleize | downcase
+    assign panel_1 = 'mf-dm-' | append: handle_1
+
+    capture tiles
+      for block in blocks
+        assign block_menu_item = block.settings.menu-item | handleize | downcase
+        if block.type == 'image' and block_menu_item == handle_1
+          assign tile_link = block.settings.link-url
+          assign tile_caption = block.settings.description | escape
+          assign tile_image = block.settings.mobile-image | default: block.settings.image
+          if tile_image == blank and tile_link contains '/collections/'
+            assign tile_collection_handle = tile_link | split: '/collections/' | last | split: '/' | first | split: '?' | first
+            assign tile_image = collections[tile_collection_handle].featured_image
+          endif
+
+          echo '<li class="mf-dm__tile" data-block-id="' | append: block.id | append: '">'
+          if tile_link != blank
+            echo '<a href="' | append: tile_link | append: '">'
+          endif
+          echo '<div class="mf-dm__media">'
+          if tile_image != blank
+            echo tile_image | image_url: width: 640 | image_tag: widths: '320, 480, 640', sizes: '(max-width: 639px) 40vw, 200px', loading: 'lazy', alt: block.settings.description
+          else
+            echo 'collection-1' | placeholder_svg_tag
+          endif
+          echo '</div>'
+          if tile_caption != blank
+            echo '<span class="mf-dm__caption">' | append: tile_caption | append: '</span>'
+          endif
+          if tile_link != blank
+            echo '</a>'
+          endif
+          echo '</li>'
+        endif
+      endfor
+    endcapture
+
+    assign has_panel = false
+    if link_1.links != blank or tiles != blank
+      assign has_panel = true
+    endif
+
+    assign show_view_all = true
+    if link_1.url == '#' or link_1.url == '/#'
+      assign show_view_all = false
+    endif
+    for link_2 in link_1.links
+      if link_2.url == link_1.url
+        assign show_view_all = false
+      endif
+    endfor
+  -%}
+
+  {%- capture root_items -%}
+    {{- root_items -}}
+    <li class="mf-dm__item"{% if highlight_item == handle_1 %} data-highlight="true"{% endif %}>
+      {%- if has_panel -%}
+        <button
+          type="button"
+          class="mf-dm__row"
+          data-mf-open="{{ panel_1 }}"
+          aria-controls="{{ panel_1 }}"
+          aria-expanded="false"
+        >
+          <span class="mf-dm__label">{{ link_1.title }}</span>
+          <span class="mf-dm__tri" aria-hidden="true"></span>
+        </button>
+      {%- elsif modal_item == handle_1 -%}
+        <modal-trigger class="mf-dm__row" data-id="header-modal" data-delay="450" tabindex="0" aria-haspopup="true">
+          <span class="mf-dm__label">{{ link_1.title }}</span>
+        </modal-trigger>
+      {%- else -%}
+        <a class="mf-dm__row" href="{{ link_1.url }}"{% if link_1.current %} aria-current="page"{% endif %}>
+          <span class="mf-dm__label">{{ link_1.title }}</span>
+        </a>
+      {%- endif -%}
+    </li>
+  {%- endcapture -%}
+
+  {%- if has_panel -%}
+    {%- capture panels -%}
+      {{- panels -}}
+      <div class="mf-dm__panel" id="{{ panel_1 }}" data-panel-id="{{ panel_1 }}" data-parent="root" data-state="after" inert>
+        <button type="button" class="mf-dm__back" data-mf-back>
+          <span class="mf-dm__chev" aria-hidden="true"></span>
+          {{- back_t -}}
+        </button>
+        <p class="mf-dm__title">{{ link_1.title }}</p>
+
+        <ul class="mf-dm__list mf-dm__list--sub">
+          {%- for link_2 in link_1.links -%}
+            {%- assign panel_2 = panel_1 | append: '-' | append: link_2.handle -%}
+            <li class="mf-dm__item">
+              {%- if link_2.links != blank -%}
+                <button
+                  type="button"
+                  class="mf-dm__row"
+                  data-mf-open="{{ panel_2 }}"
+                  aria-controls="{{ panel_2 }}"
+                  aria-expanded="false"
+                >
+                  <span class="mf-dm__label">{{ link_2.title }}</span>
+                  <span class="mf-dm__tri" aria-hidden="true"></span>
+                </button>
+              {%- else -%}
+                <a class="mf-dm__row" href="{{ link_2.url }}"{% if link_2.current %} aria-current="page"{% endif %}>
+                  <span class="mf-dm__label">{{ link_2.title }}</span>
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+
+          {%- if show_view_all -%}
+            <li class="mf-dm__item">
+              <a class="mf-dm__row mf-dm__row--all" href="{{ link_1.url }}">
+                <span class="mf-dm__label">{{ view_all_t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+
+        {%- unless tiles == blank -%}
+          <ul class="mf-dm__tiles">{{ tiles }}</ul>
+        {%- endunless -%}
+      </div>
+
+      {%- for link_2 in link_1.links -%}
+        {%- if link_2.links != blank -%}
+          {%- assign panel_2 = panel_1 | append: '-' | append: link_2.handle -%}
+          <div class="mf-dm__panel" id="{{ panel_2 }}" data-panel-id="{{ panel_2 }}" data-parent="{{ panel_1 }}" data-state="after" inert>
+            <button type="button" class="mf-dm__back" data-mf-back>
+              <span class="mf-dm__chev" aria-hidden="true"></span>
+              {{- link_1.title -}}
+            </button>
+            <p class="mf-dm__title">{{ link_2.title }}</p>
+
+            <ul class="mf-dm__list mf-dm__list--sub">
+              {%- for link_3 in link_2.links -%}
+                <li class="mf-dm__item">
+                  <a class="mf-dm__row" href="{{ link_3.url }}"{% if link_3.current %} aria-current="page"{% endif %}>
+                    <span class="mf-dm__label">{{ link_3.title }}</span>
+                  </a>
+                </li>
+              {%- endfor -%}
+
+              {%- unless link_2.url == '#' or link_2.url == '/#' -%}
+                <li class="mf-dm__item">
+                  <a class="mf-dm__row mf-dm__row--all" href="{{ link_2.url }}">
+                    <span class="mf-dm__label">{{ view_all_t }}</span>
+                  </a>
+                </li>
+              {%- endunless -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<mf-drawer-menu class="mf-dm">
+  <div class="mf-dm__panels">
+    <div class="mf-dm__panel" data-panel-id="root" data-state="current">
+      <ul class="mf-dm__list mf-dm__list--root">
+        {{- root_items -}}
+      </ul>
+    </div>
+
+    {{- panels -}}
+  </div>
+</mf-drawer-menu>
+
+<script>
+  (() => {
+    if (customElements.get('mf-drawer-menu')) return;
+
+    class MfDrawerMenu extends HTMLElement {
+      connectedCallback() {
+        this.stack = ['root'];
+        this.onClick = this.onClick.bind(this);
+        this.onBlockSelect = ({ detail }) => this.reveal(detail && detail.id);
+        this.addEventListener('click', this.onClick);
+        window.addEventListener('theme:menuBlock:select', this.onBlockSelect);
+
+        // Return to the top level once the drawer has fully closed
+        const viewport = document.querySelector('.layout--viewport');
+        if (viewport) {
+          this.observer = new MutationObserver(() => {
+            if (viewport.getAttribute('data-drawer-status') === 'closed') this.go(['root']);
+          });
+          this.observer.observe(viewport, { attributes: true, attributeFilter: ['data-drawer-status'] });
+        }
+
+        this.go(this.stack);
+      }
+
+      disconnectedCallback() {
+        this.removeEventListener('click', this.onClick);
+        window.removeEventListener('theme:menuBlock:select', this.onBlockSelect);
+        this.observer?.disconnect();
+      }
+
+      onClick(event) {
+        const open = event.target.closest('[data-mf-open]');
+        if (open) return this.go([...this.stack, open.dataset.mfOpen], { focus: true });
+
+        const back = event.target.closest('[data-mf-back]');
+        if (back && this.stack.length > 1) {
+          this.go(this.stack.slice(0, -1), { focus: true, from: this.stack[this.stack.length - 1] });
+        }
+      }
+
+      go(stack, { focus = false, from = null } = {}) {
+        this.stack = stack;
+        const current = stack[stack.length - 1];
+
+        this.querySelectorAll('[data-panel-id]').forEach((panel) => {
+          const id = panel.dataset.panelId;
+          const state = id === current ? 'current' : stack.includes(id) ? 'before' : 'after';
+          panel.dataset.state = state;
+          panel.inert = state !== 'current';
+        });
+
+        this.querySelectorAll('[data-mf-open]').forEach((button) => {
+          button.setAttribute('aria-expanded', stack.includes(button.dataset.mfOpen));
+        });
+
+        if (!focus) return;
+        this.closest('.drawer--side')?.scrollTo({ top: 0 });
+        const panel = this.querySelector(`[data-panel-id="${current}"]`);
+        const target = from ? panel?.querySelector(`[data-mf-open="${from}"]`) : panel?.querySelector('[data-mf-back]');
+        target?.focus({ preventScroll: true });
+      }
+
+      reveal(blockId) {
+        const block = blockId && this.querySelector(`[data-block-id="${blockId}"]`);
+        let panel = block?.closest('[data-panel-id]');
+        if (!panel) return;
+
+        const stack = [];
+        while (panel) {
+          stack.unshift(panel.dataset.panelId);
+          panel = panel.dataset.parent ? this.querySelector(`[data-panel-id="${panel.dataset.parent}"]`) : null;
+        }
+        this.go(stack);
+      }
+    }
+
+    customElements.define('mf-drawer-menu', MfDrawerMenu);
+  })();
+</script>

@@ -2,9 +2,55 @@
 
 {%- doc -%}
   Provides the wrapper structure for the mobile navigation drawer.
+  Moonflower layout: search + bag + close row, drill-down menu, then
+  account links and localization pinned to the bottom (assets/mf-nav.css).
 {%- enddoc -%}
 
+{%- liquid
+  assign close_t = 'general.a11y.close' | t
+  assign search_t = 'general.search.search' | t
+  assign cart_title_t = 'cart.title_' | append: settings.cart--label | t
+-%}
+
 <div class="mobile-nav">
+  <div class="mf-dn__top">
+    {%- if settings.search-enabled -%}
+      <form class="mf-dn__search" action="{{ routes.search_url }}" method="get" role="search">
+        <label class="mf-dn__search-label" for="mf-dn-search">{{ search_t }}</label>
+        {%- render 'icons', icon: 'search' -%}
+        <input
+          id="mf-dn-search"
+          class="mf-dn__search-input"
+          type="search"
+          name="q"
+          placeholder="{{ search_t }}"
+          autocomplete="off"
+          enterkeyhint="search"
+        >
+        <input type="hidden" name="options[prefix]" value="last">
+      </form>
+    {%- endif -%}
+
+    <a
+      class="mf-dn__icon"
+      aria-label="{{ cart_title_t }}"
+      {% if settings.cart--type == 'drawer' %}
+        data-drawer-open="right"
+        data-drawer-view="cart-drawer"
+        aria-haspopup="menu"
+        href="#"
+      {% else %}
+        href="{{ routes.cart_url }}"
+      {% endif %}
+    >
+      {%- render 'icons', icon: settings.cart--label -%}
+    </a>
+
+    <button class="mf-dn__icon mf-dn__close" type="button" data-drawer-close aria-label="{{ close_t }}">
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+
   <ul class="mobile-nav--utilities" data-text-color="body" data-mq="small">
     <li class="mobile-nav--search">
       {%- comment %} Copied from header {% endcomment -%}
@@ -18,7 +64,11 @@
     {%- comment %} Copied from header {% endcomment -%}
   </nav>
 
-  <div class="mobile-nav--footer" data-mq="small">
+  <div class="mobile-nav--footer">
+    <ul class="mobile-nav--links">
+      {%- comment %} Copied from header {% endcomment -%}
+    </ul>
+
     <div class="mobile-nav--social-icons">
       {%- comment %} Copied from announcement {% endcomment -%}
     </div>
@@ -40,34 +90,10 @@
     }
   }
 
-  .mobile-nav--menu {
-    padding: var(--spacing--block) var(--spacing--item) 0 var(--spacing--item);
-
-    @media (min-width: 768px) {
-      [data-item='nav-text'] {
-        line-height: 1;
-      }
-    }
-  }
-
   .mobile-nav--utilities {
     display: flex;
     flex-direction: column;
     padding: var(--spacing--block) var(--spacing--item) 0 var(--spacing--item);
-
-    @media (min-width: 768px) {
-      gap: var(--spacing--0);
-    }
-
-    @media (max-width: 767px) {
-      gap: var(--spacing--1);
-    }
-
-    @media (hover: hover) {
-      &:has(+ .mobile-nav--menu .y-menu[data-hover-disabled='false']) [data-item='nav-text']:hover {
-        font-weight: 700;
-      }
-    }
 
     &:has(> :first-child:empty):has(> :last-child:empty) {
       display: none;
@@ -89,14 +115,8 @@
 
   .mobile-nav--footer {
     display: flex;
-    justify-content: space-between;
-    gap: var(--spacing--block);
-    padding: var(--spacing--block) var(--spacing--item);
+    flex-direction: column;
     margin-top: auto;
-
-    &:has(.disclosure--root[data-id='mobile-nav--locale']) {
-      flex-direction: column;
-    }
   }
 
   .mobile-nav--localization {

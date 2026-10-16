@@ -18,6 +18,15 @@
         assign mobile_aspect_ratio = 100.0 | divided_by: block.settings.mobile-aspect-ratio
         assign mobile_display_type = block.settings.mobile-image-display-type
         assign link_url = block.settings.link-url
+
+        comment
+          Moonflower: with no image picked, use the linked collection's image
+        endcomment
+        assign block_image = block.settings.image
+        if block_image == blank and link_url contains '/collections/'
+          assign image_collection_handle = link_url | split: '/collections/' | last | split: '/' | first | split: '?' | first
+          assign block_image = collections[image_collection_handle].featured_image
+        endif
       -%}
 
       <div
@@ -39,7 +48,7 @@
             data-transition-trigger="hover"
           {% endunless %}
         >
-          {%- if block.settings.image == blank -%}
+          {%- if block_image == blank -%}
             {%-
               render 'placeholder',
               type: 'collection',
@@ -52,10 +61,11 @@
           {%- else -%}
             {%-
               render 'image',
-              image: block.settings.image,
+              image: block_image,
               aspect_ratio: aspect_ratio,
               display_type: display_type,
               loading: 'lazy',
+              sizes: '(min-width: 768px) 22vw, 45vw',
               mobile_aspect_ratio: mobile_aspect_ratio,
               mobile_display_type: mobile_display_type,
               mobile_image: block.settings.mobile-image

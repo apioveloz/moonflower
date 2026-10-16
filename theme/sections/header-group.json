@@ -54,21 +54,86 @@
     "header": {
       "type": "header",
       "blocks": {
-        "image_JkY3Hr": {
+        "shop_tile_1": {
           "type": "image",
           "settings": {
-            "menu-item": "",
+            "menu-item": "Shop",
             "image-display-type": "aspect-ratio",
-            "aspect-ratio": 100,
-            "description": "Description",
-            "link-url": "",
-            "mobile-image-display-type": "original",
-            "mobile-aspect-ratio": 134
+            "aspect-ratio": 75,
+            "description": "Curated favorites",
+            "link-url": "shopify://collections/best-sellers",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 125
+          }
+        },
+        "shop_tile_2": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 75,
+            "description": "Cold process soap bars",
+            "link-url": "shopify://collections/cold-process-soap-bars",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 125
+          }
+        },
+        "rituals_tile_1": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 75,
+            "description": "The face ritual",
+            "link-url": "shopify://collections/skin",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 125
+          }
+        },
+        "rituals_tile_2": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 75,
+            "description": "The hair ritual",
+            "link-url": "shopify://collections/hair",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 125
+          }
+        },
+        "bundles_tile_1": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Bundles",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 75,
+            "description": "Island essentials",
+            "link-url": "shopify://collections/body",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 125
+          }
+        },
+        "bundles_tile_2": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Bundles",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 75,
+            "description": "Reef-safe & ready",
+            "link-url": "shopify://collections/outdoors",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 125
           }
         }
       },
       "block_order": [
-        "image_JkY3Hr"
+        "shop_tile_1",
+        "shop_tile_2",
+        "rituals_tile_1",
+        "rituals_tile_2",
+        "bundles_tile_1",
+        "bundles_tile_2"
       ],
       "settings": {
         "layout": "center-left",
