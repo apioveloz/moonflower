@@ -1,0 +1,31 @@
+{
+  "heading": "An atelier for window coverings",
+  "storyLead": "Isla Shades was born from a simple belief: that the details matter.",
+  "storyParagraphs": [
+    "That the way light filters through your home in the morning, the privacy you feel in the evening, and the beauty you see every day—these are worth careful consideration. Worth craft. Worth time.",
+    "Founded and led by a designer who spent years studying European textile traditions before returning to her home in Puerto Rico, Isla Shades brings together the best of both worlds: honoring time-tested craftsmanship while embracing the practical realities of island living.",
+    "Every window covering we create is made to measure—not just in dimensions, but in understanding. We take the time to learn about your space, your lifestyle, and your vision. Because when something is made specifically for you, it shows."
+  ],
+  "storyImage": "https://images.unsplash.com/photo-1759340875613-070b317265f8?w=1600&q=80&auto=format",
+  "storyImageAlt": "Open doorway revealing lush Caribbean tropical foliage and warm light",
+  "quote": "Quality craftsmanship and Caribbean living require a unique balance of beauty and practicality.",
+  "founderName": "Cristina Muñiz",
+  "founderTitle": "Founder & Lead Designer",
+  "founderPhoto": "",
+  "founderBio": "With training in European textile design and a deep love for Caribbean living, Cristina brings both technical excellence and personal care to every project. Her work reflects a belief that good design is both principled and profoundly personal.",
+  "founderBioSecondary": "After studying under master craftspeople in Portugal and Spain, she returned to Puerto Rico with a vision: to bring the quality and intentionality of European ateliers to the islands. Isla Shades is the realization of that vision.",
+  "values": [
+    {
+      "label": "Our Approach",
+      "body": "We start with listening. Every project begins with a conversation about your space, your needs, and your aesthetic. From there, we design solutions that are as functional as they are beautiful."
+    },
+    {
+      "label": "Our Values",
+      "body": "Quality over quantity. Thoughtful design over trends. Lasting relationships over transactions. We create window coverings that you'll love for years to come."
+    },
+    {
+      "label": "Our Craft",
+      "body": "Each piece is made in our San Juan workshop using techniques refined over decades. We source materials from European suppliers who share our commitment to quality and longevity."
+    }
+  ]
+}

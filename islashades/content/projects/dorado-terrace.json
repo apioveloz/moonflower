@@ -1,0 +1,30 @@
+{
+  "title": "Dorado Terrace",
+  "order": 70,
+  "category": "hospitality",
+  "location": "Dorado, PR",
+  "date": "February 2024",
+  "collaborations": [
+    "Landscape Studio PR"
+  ],
+  "description": "An oceanfront restaurant required motorized exterior shading for its 1,200 sq ft covered terrace — protecting diners from afternoon sun while maintaining open views of the water. Marine-grade motorized roller shades in a semi-open weave fabric were selected for UV protection, saltwater resistance, and wind stability. The system integrates with the restaurant's existing smart controls and can be deployed fully in under 30 seconds.",
+  "heroImage": "https://images.unsplash.com/photo-1732817207697-77b636b2ff6d?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1732817207697-77b636b2ff6d?w=1600&q=80&auto=format",
+      "alt": "Oceanfront terrace with motorized shades deployed"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1759340875613-070b317265f8?w=1600&q=80&auto=format",
+      "alt": "Terrace open with shades fully raised, ocean view"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1658385015699-27ee854f43fa?w=1600&q=80&auto=format",
+      "alt": "Dining setup under partial shade at sunset"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1705493625048-f3ae8452d249?w=1600&q=80&auto=format",
+      "alt": "Marine-grade semi-open weave fabric detail"
+    }
+  ]
+}

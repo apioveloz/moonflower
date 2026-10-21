@@ -1,0 +1,30 @@
+{
+  "title": "Boutique Law Office",
+  "order": 40,
+  "category": "commercial",
+  "location": "Hato Rey, San Juan, PR",
+  "date": "November 2023",
+  "collaborations": [
+    "DCM Arquitectos"
+  ],
+  "description": "A growing boutique law firm needed window treatments that conveyed authority and discretion across three floors of glass-fronted offices. Panel tracks in a warm charcoal fabric provide adjustable privacy for client meetings, while a motorized system allows partners to control light levels from a central panel. The installation was completed overnight to avoid disrupting the firm's schedule.",
+  "heroImage": "https://images.unsplash.com/photo-1583593000809-300b43a1a778?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1583593000809-300b43a1a778?w=1600&q=80&auto=format",
+      "alt": "Law office corridor with panel track system"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1643658423605-4819ab28e39b?w=1600&q=80&auto=format",
+      "alt": "Conference room with motorized charcoal panels"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1658385015699-27ee854f43fa?w=1600&q=80&auto=format",
+      "alt": "Partner office with privacy panel half-open"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1608424371207-ab70d9d68e80?w=1600&q=80&auto=format",
+      "alt": "Fabric detail — charcoal panel track material"
+    }
+  ]
+}

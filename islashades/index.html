@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isla Shades — Made-to-measure window coverings, San Juan</title>
+    <meta name="description" content="Isla Shades crafts made-to-measure curtains, roman shades, and roller shades for homes and businesses in Puerto Rico. Book a free in-home consultation." />
+    <meta name="theme-color" content="#F8F6F2" />
+    <link rel="canonical" href="https://islashadespr.com/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Isla Shades" />
+    <meta property="og:title" content="Isla Shades — Made-to-measure window coverings, San Juan" />
+    <meta property="og:description" content="Made-to-measure window coverings where European craftsmanship meets Caribbean light." />
+    <meta property="og:url" content="https://islashadespr.com/" />
+    <meta property="og:image" content="https://islashadespr.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Netlify Forms detects forms in static HTML at deploy time. The React
+      booking form posts to this same form name, so keep the field list in
+      sync with src/app/pages/Services.tsx.
+    -->
+    <form name="consultation" data-netlify="true" netlify-honeypot="website" hidden>
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="projectType" />
+      <input name="location" />
+      <input name="timeline" />
+      <textarea name="message"></textarea>
+      <input name="page" />
+      <input name="website" />
+    </form>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

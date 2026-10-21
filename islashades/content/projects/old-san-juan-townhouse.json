@@ -1,0 +1,30 @@
+{
+  "title": "Old San Juan Townhouse",
+  "order": 20,
+  "category": "residential",
+  "location": "Old San Juan, PR",
+  "date": "August 2023",
+  "collaborations": [
+    "Restauración & Co."
+  ],
+  "description": "This 19th-century townhouse required treatments that respected its architectural heritage while meeting modern comfort standards. Restoration-appropriate interior shutters were custom-milled to match original profiles, paired with hand-sewn roman shades in a muted sage linen that echoes the building's historic palette. The project required close coordination with heritage consultants to ensure every installation was reversible and non-invasive.",
+  "heroImage": "https://images.unsplash.com/photo-1631345346020-f9ca0902f5be?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1631345346020-f9ca0902f5be?w=1600&q=80&auto=format",
+      "alt": "Historic dining room with roman shades, Old San Juan"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1583593000809-300b43a1a778?w=1600&q=80&auto=format",
+      "alt": "Hallway with period-appropriate interior shutters"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1574197635162-68e4b468e4e9?w=1600&q=80&auto=format",
+      "alt": "Shutter detail showing custom milling profile"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1608424371207-ab70d9d68e80?w=1600&q=80&auto=format",
+      "alt": "Sage linen roman shade fabric detail"
+    }
+  ]
+}

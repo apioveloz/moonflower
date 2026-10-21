@@ -1,0 +1,41 @@
+{
+  "heading": "What we craft for you",
+  "services": [
+    {
+      "title": "Custom Curtains & Drapery",
+      "description": "From lightweight sheers to luxurious lined drapes, each piece is tailored to your windows and designed to complement your interior. We work with European fabrics and custom hardware."
+    },
+    {
+      "title": "Roman Shades",
+      "description": "Clean, contemporary, and available in a range of fabrics and fold styles. Perfect for modern spaces that need both beauty and precise light control."
+    },
+    {
+      "title": "Roller Shades",
+      "description": "Minimalist and practical, with options for light filtering, blackout, and motorization. Ideal for large windows, commercial spaces, and contemporary homes."
+    }
+  ],
+  "bannerImage": "https://images.unsplash.com/photo-1574197635162-68e4b468e4e9?w=1600&q=80&auto=format",
+  "bannerImageAlt": "White curtain detail showing fine craftsmanship and light quality",
+  "steps": [
+    {
+      "title": "Consultation",
+      "description": "We visit your space to understand your needs, take measurements, and discuss style preferences and functional requirements."
+    },
+    {
+      "title": "Design Proposal",
+      "description": "We present fabric samples, design options, and a detailed proposal with pricing and timeline."
+    },
+    {
+      "title": "Fabrication",
+      "description": "Your window coverings are crafted with precision and care in our San Juan workshop."
+    },
+    {
+      "title": "Installation",
+      "description": "Professional installation ensures everything is perfectly fitted and functioning beautifully."
+    }
+  ],
+  "bookingHeading": "Book a Consultation",
+  "bookingIntro": "Fill out the form and we'll be in touch within 48 hours to schedule your in-home consultation. There's no obligation—just a conversation about your space.",
+  "bookingImage": "https://images.unsplash.com/photo-1705493625048-f3ae8452d249?w=1600&q=80&auto=format",
+  "bookingImageAlt": "Close-up of woven textile material showing fine weave craftsmanship"
+}

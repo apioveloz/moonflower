@@ -1,0 +1,33 @@
+{
+  "name": "isla-shades",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/sitemap.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "cms": "npx decap-server"
+  },
+  "dependencies": {
+    "lucide-react": "0.487.0",
+    "motion": "12.23.24",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.55.0",
+    "react-router": "7.13.0",
+    "sonner": "2.0.3",
+    "tw-animate-css": "1.3.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.12",
+    "@types/node": "22.15.3",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "4.7.0",
+    "tailwindcss": "4.1.12",
+    "typescript": "5.9.3",
+    "vite": "6.3.5"
+  }
+}

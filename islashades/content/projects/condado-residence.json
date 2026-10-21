@@ -1,0 +1,35 @@
+{
+  "title": "Condado Residence",
+  "order": 10,
+  "category": "residential",
+  "location": "Condado, San Juan, PR",
+  "date": "March 2024",
+  "collaborations": [
+    "Arq. María Vélez",
+    "Studio Forma Interiors"
+  ],
+  "description": "A beachfront apartment called for window treatments that could stand up to salt air and strong afternoon light without sacrificing elegance. Custom-lined linen curtains in a warm ivory diffuse the Caribbean sun across the open living space, while motorized blackout panels in the bedrooms offer complete privacy at the touch of a button. Every detail was coordinated with the interior architect to ensure the hardware, fabric weight, and pleat style felt native to the space.",
+  "heroImage": "https://images.unsplash.com/photo-1717661568439-a677b026f401?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1717661568439-a677b026f401?w=1600&q=80&auto=format",
+      "alt": "Living room with floor-to-ceiling linen curtains, Condado"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1528822855841-e8bf3134cdc9?w=1600&q=80&auto=format",
+      "alt": "Sheer linen panels diffusing afternoon light in sitting area"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1631345346020-f9ca0902f5be?w=1600&q=80&auto=format",
+      "alt": "Dining area with natural light filtering through linen"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1574197635162-68e4b468e4e9?w=1600&q=80&auto=format",
+      "alt": "Detail of custom curtain heading and track"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1573507811472-909cd17e834d?w=1600&q=80&auto=format",
+      "alt": "Fabric texture close-up — European linen weave"
+    }
+  ]
+}

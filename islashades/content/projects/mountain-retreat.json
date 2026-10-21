@@ -1,0 +1,28 @@
+{
+  "title": "Mountain Retreat",
+  "order": 30,
+  "category": "residential",
+  "location": "Utuado, PR",
+  "date": "January 2024",
+  "collaborations": [],
+  "description": "Perched above the central mountain range with panoramic views of the rainforest canopy, this retreat required treatments that preserved sightlines while managing intense morning light. Light-filtering roller shades in a natural woven texture were selected to soften glare without obscuring the landscape. The result is a seamless boundary between interior and exterior — the fabric becomes part of the view.",
+  "heroImage": "https://images.unsplash.com/photo-1746933075302-e88d565d4189?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1746933075302-e88d565d4189?w=1600&q=80&auto=format",
+      "alt": "Bright mountain retreat living room with roller shades"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1528822855841-e8bf3134cdc9?w=1600&q=80&auto=format",
+      "alt": "Sheer roller shade panels diffusing rainforest light"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1705493625048-f3ae8452d249?w=1600&q=80&auto=format",
+      "alt": "Natural woven roller shade texture detail"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1717661568439-a677b026f401?w=1600&q=80&auto=format",
+      "alt": "Panoramic window with shade at half position"
+    }
+  ]
+}

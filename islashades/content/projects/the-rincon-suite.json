@@ -1,0 +1,35 @@
+{
+  "title": "The Rincón Suite",
+  "order": 60,
+  "category": "hospitality",
+  "location": "Rincón, PR",
+  "date": "October 2023",
+  "collaborations": [
+    "Estudio Caribe",
+    "Hotel Group Holdings"
+  ],
+  "description": "A boutique surf hotel on the west coast commissioned coordinated window treatments for 24 guest rooms and three common areas. Each room received a layered system — sheer linen panels for daytime privacy and light diffusion, paired with a blackout roller for deep sleep despite the early Caribbean sunrise. Hardware finishes and fabric selections were standardized across the property while allowing subtle variation by room category.",
+  "heroImage": "https://images.unsplash.com/photo-1764670364288-e1058d07ca7e?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1764670364288-e1058d07ca7e?w=1600&q=80&auto=format",
+      "alt": "Guest room with floor-length sheer linen panels, Rincón"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1601000785676-f9b0ade234d3?w=1600&q=80&auto=format",
+      "alt": "Blackout layer closed at golden hour"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1528822855841-e8bf3134cdc9?w=1600&q=80&auto=format",
+      "alt": "Sheer linen panels diffusing light in the lounge area"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1574197635162-68e4b468e4e9?w=1600&q=80&auto=format",
+      "alt": "Curtain heading detail — custom bronze hardware"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1573507811472-909cd17e834d?w=1600&q=80&auto=format",
+      "alt": "Sheer linen fabric — light transmission close-up"
+    }
+  ]
+}

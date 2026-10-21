@@ -1,0 +1,28 @@
+# Netlify deploys the Isla Shades site (islashades/) from this repository.
+[build]
+  base = "islashades"
+  command = "npm run build"
+  publish = "dist"
+  # Skip deploys when nothing inside islashades/ changed.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ."
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Single-page app: let React Router handle every path that isn't a real file.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"

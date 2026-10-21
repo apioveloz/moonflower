@@ -1,0 +1,47 @@
+{
+  "heroTitle": "Isla Shades",
+  "heroTagline": "Made-to-measure window coverings where European craftsmanship meets Caribbean light.",
+  "heroImage": "https://images.unsplash.com/photo-1528822855841-e8bf3134cdc9?w=1600&q=80&auto=format",
+  "heroImageAlt": "Sheer white curtain panels filtering soft Caribbean light",
+  "heroVideo": "",
+  "manifestoHeading": "Every window deserves intention.",
+  "manifestoParagraphs": [
+    "At Isla Shades, we believe your windows are more than functional elements—they're opportunities to shape light, create atmosphere, and define the character of your space.",
+    "Each piece is thoughtfully designed to balance European quality with the practical demands of island living. Because when something is made specifically for you, it shows."
+  ],
+  "featuredProjects": ["condado-residence", "the-rincon-suite", "old-san-juan-townhouse"],
+  "pillars": [
+    {
+      "title": "European Craftsmanship",
+      "body": "Traditional techniques passed down through generations, refined for contemporary spaces and island climate."
+    },
+    {
+      "title": "Made to Measure",
+      "body": "Every dimension, every fabric, every detail chosen specifically for your windows and your life."
+    },
+    {
+      "title": "Caribbean Conscious",
+      "body": "Designed for our light, our humidity, and the way we live beautifully in Puerto Rico."
+    }
+  ],
+  "islandHeading": "Designed for our light, our humidity, our season.",
+  "islandItems": [
+    {
+      "title": "Humidity",
+      "body": "Linings and fabrics chosen to resist mildew and sagging in year-round 75% humidity. Breathable weaves over sealed synthetics."
+    },
+    {
+      "title": "Salt air",
+      "body": "Marine-grade hardware and powder-coated tracks for coastal homes, from Condado to Rincón."
+    },
+    {
+      "title": "Light and UV",
+      "body": "Solar-screen weaves and UV-stable dyes so colors hold and furniture does not fade behind them."
+    },
+    {
+      "title": "Hurricane season",
+      "body": "Quick-release mounts and interior-only installations that do not compromise shutters or impact glass."
+    }
+  ],
+  "ctaHeading": "Ready to transform your space?"
+}

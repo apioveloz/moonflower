@@ -1,0 +1,189 @@
+# Decap CMS — https://decapcms.org/docs/configuration-options/
+# Editors sign in at https://islashadespr.com/admin/ with GitHub. Every save is
+# a commit to the branch below, which triggers a new Netlify deploy (~1 min).
+backend:
+  name: github
+  repo: apioveloz/moonflower
+  branch: main
+  commit_messages:
+    create: "Content: create {{collection}} “{{slug}}”"
+    update: "Content: update {{collection}} “{{slug}}”"
+    delete: "Content: delete {{collection}} “{{slug}}”"
+    uploadMedia: "Content: upload “{{path}}”"
+    deleteMedia: "Content: delete “{{path}}”"
+
+# Lets `npm run cms` + `npm run dev` edit local files without signing in.
+local_backend: true
+
+site_url: https://islashadespr.com
+display_url: https://islashadespr.com
+logo_url: /favicon.png
+
+# Paths are relative to the repository root; the site lives in islashades/.
+media_folder: islashades/public/uploads
+public_folder: /uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    description: Portfolio projects shown on /projects. Lower “Order” numbers appear first.
+    folder: islashades/content/projects
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{category}} · {{location}}"
+    sortable_fields: [order, title, category]
+    view_groups:
+      - { label: Category, field: category }
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Order, name: order, widget: number, value_type: int, default: 100, hint: "Lower numbers are listed first (e.g. 10, 20, 30)." }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: Residential, value: residential }
+          - { label: Commercial, value: commercial }
+          - { label: Hospitality, value: hospitality }
+      - { label: Location, name: location, widget: string, hint: "e.g. Condado, San Juan, PR" }
+      - { label: Completed, name: date, widget: string, hint: "e.g. March 2024" }
+      - label: Collaborators
+        name: collaborations
+        widget: list
+        required: false
+        default: []
+        field: { label: Name, name: name, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Main image, name: heroImage, widget: image, hint: "Shown on the portfolio grid and at the top of the project page." }
+      - label: Gallery
+        name: gallery
+        widget: list
+        hint: "The first five images form the desktop layout: one large + one tall, then a row of two or three."
+        summary: "{{fields.alt}}"
+        fields:
+          - { label: Image, name: src, widget: image }
+          - { label: Description (for accessibility and the lightbox caption), name: alt, widget: string }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: islashades/content/pages/home.json
+        fields:
+          - { label: Hero title, name: heroTitle, widget: string }
+          - { label: Hero tagline, name: heroTagline, widget: text }
+          - { label: Hero image, name: heroImage, widget: image }
+          - { label: Hero image description, name: heroImageAlt, widget: string }
+          - { label: Hero video (optional MP4), name: heroVideo, widget: file, required: false, hint: "Plays muted behind the hero. Keep it short (under ~10 MB). Leave empty to show the image only." }
+          - { label: Manifesto heading, name: manifestoHeading, widget: string }
+          - label: Manifesto paragraphs
+            name: manifestoParagraphs
+            widget: list
+            field: { label: Paragraph, name: paragraph, widget: text }
+          - label: Featured projects
+            name: featuredProjects
+            widget: relation
+            collection: projects
+            value_field: "{{slug}}"
+            search_fields: [title, location]
+            display_fields: [title]
+            multiple: true
+            min: 1
+            max: 3
+          - label: Pillars
+            name: pillars
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: body, widget: text }
+          - { label: Island section heading, name: islandHeading, widget: string }
+          - label: Island section items
+            name: islandItems
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: body, widget: text }
+          - { label: Closing call-to-action heading, name: ctaHeading, widget: string }
+
+      - name: about
+        label: About
+        file: islashades/content/pages/about.json
+        fields:
+          - { label: Page heading, name: heading, widget: string }
+          - { label: Story — opening line, name: storyLead, widget: text }
+          - label: Story — paragraphs
+            name: storyParagraphs
+            widget: list
+            field: { label: Paragraph, name: paragraph, widget: text }
+          - { label: Story image, name: storyImage, widget: image }
+          - { label: Story image description, name: storyImageAlt, widget: string }
+          - { label: Pull quote, name: quote, widget: text }
+          - { label: Founder name, name: founderName, widget: string }
+          - { label: Founder title, name: founderTitle, widget: string }
+          - { label: Founder photo, name: founderPhoto, widget: image, required: false, hint: "Portrait orientation works best (4:5)." }
+          - { label: Founder bio, name: founderBio, widget: text }
+          - { label: Founder bio (second paragraph), name: founderBioSecondary, widget: text, required: false }
+          - label: Values
+            name: values
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Text, name: body, widget: text }
+
+      - name: services
+        label: Services & Booking
+        file: islashades/content/pages/services.json
+        fields:
+          - { label: Page heading, name: heading, widget: string }
+          - label: Services
+            name: services
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - { label: Banner image, name: bannerImage, widget: image }
+          - { label: Banner image description, name: bannerImageAlt, widget: string }
+          - label: Process steps
+            name: steps
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - { label: Booking heading, name: bookingHeading, widget: string }
+          - { label: Booking intro, name: bookingIntro, widget: text }
+          - { label: Booking image, name: bookingImage, widget: image }
+          - { label: Booking image description, name: bookingImageAlt, widget: string }
+
+  - name: settings
+    label: Settings
+    files:
+      - name: site
+        label: Contact & business details
+        file: islashades/content/site.json
+        fields:
+          - { label: Business name, name: name, widget: string }
+          - { label: Tagline (footer), name: tagline, widget: text }
+          - { label: Phone (as displayed), name: phone, widget: string, required: false, hint: "e.g. (787) 555-0123. Leave empty to hide." }
+          - { label: Phone (international format for tap-to-call), name: phoneE164, widget: string, required: false, hint: "e.g. +17875550123" }
+          - { label: WhatsApp number, name: whatsapp, widget: string, required: false, hint: "Digits with country code, e.g. 17875550123. Leave empty to hide." }
+          - { label: Email, name: email, widget: string, required: false, hint: "Leave empty to hide." }
+          - { label: Instagram handle, name: instagram, widget: string, required: false }
+          - { label: Instagram URL, name: instagramUrl, widget: string, required: false }
+          - { label: Address, name: address, widget: string }
+          - { label: Hours, name: hours, widget: string }
+          - { label: Established year, name: establishedYear, widget: string, required: false }
+          - { label: Installation lead time, name: leadTimeWeeks, widget: string, hint: "e.g. 4–6 weeks" }

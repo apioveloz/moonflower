@@ -1,0 +1,7 @@
+/*
+  Jost is the open-source stand-in for Futura PT. To use the real futura-pt,
+  create an Adobe Fonts (Typekit) web project for islashadespr.com and add
+  its CSS URL here above the Jost import, e.g.:
+  @import url('https://use.typekit.net/<project-id>.css');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');

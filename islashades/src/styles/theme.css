@@ -1,0 +1,169 @@
+:root {
+  --font-size: 16px;
+  --background: #F8F6F2;
+  --foreground: #1C1915;
+  --card: #F3F0EB;
+  --card-foreground: #1C1915;
+  --popover: #F3F0EB;
+  --popover-foreground: #1C1915;
+  --primary: #1C1915;
+  --primary-foreground: #F8F6F2;
+  --secondary: #EDE9E2;
+  --secondary-foreground: #1C1915;
+  --muted: #E4DFD7;
+  --muted-foreground: #6F6A62;
+  --accent: #124039;
+  --accent-foreground: #F8F6F2;
+  --destructive: #C0392B;
+  --destructive-foreground: #F8F6F2;
+  --border: rgba(28, 25, 21, 0.12);
+  --input: transparent;
+  --input-background: #EDE9E2;
+  --switch-background: #C8BFB5;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #B8935A;
+  --radius: 0;
+}
+
+@theme inline {
+  --font-sans: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+  --font-serif: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+  --font-mono: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[13px] font-normal uppercase tracking-[0.2em] transition-colors duration-300 whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply bg-foreground text-primary-foreground hover:bg-accent;
+  }
+  .btn-light {
+    @apply bg-white text-stone-900 hover:bg-accent hover:text-white;
+  }
+  .btn-outline {
+    @apply border border-foreground text-foreground hover:bg-foreground hover:text-primary-foreground;
+  }
+  .btn-outline-light {
+    @apply border border-white/60 text-white hover:border-white hover:bg-white/10;
+  }
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:bg-foreground;
+  }
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      transition-duration: .01ms !important;
+    }
+  }
+
+  [id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-family: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+    font-size: var(--text-2xl);
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-family: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+    font-size: var(--text-xl);
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-family: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+    font-size: var(--text-lg);
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.015em;
+  }
+
+  h4 {
+    font-family: 'futura-pt', 'Jost', 'Century Gothic', system-ui, sans-serif;
+    font-size: var(--text-base);
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    letter-spacing: 0.005em;
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}

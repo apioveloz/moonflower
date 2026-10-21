@@ -1,0 +1,28 @@
+{
+  "title": "Santurce Design Studio",
+  "order": 50,
+  "category": "commercial",
+  "location": "Santurce, San Juan, PR",
+  "date": "May 2024",
+  "collaborations": [],
+  "description": "A creative agency occupying a converted warehouse needed light control that could flex between presentation mode and open studio. Minimalist roller shades on a continuous fascia system run the full length of the north-facing clerestory windows, delivering even, diffused light ideal for color-critical work. The matte white fabric was chosen to reflect rather than absorb the industrial ceiling's ambient light.",
+  "heroImage": "https://images.unsplash.com/photo-1643658423605-4819ab28e39b?w=1600&q=80&auto=format",
+  "gallery": [
+    {
+      "src": "https://images.unsplash.com/photo-1643658423605-4819ab28e39b?w=1600&q=80&auto=format",
+      "alt": "Open studio with roller shades and clerestory light"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1583593000809-300b43a1a778?w=1600&q=80&auto=format",
+      "alt": "Presentation wall with shades fully raised"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1658385015699-27ee854f43fa?w=1600&q=80&auto=format",
+      "alt": "Detail of continuous fascia system and hardware"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1705493625048-f3ae8452d249?w=1600&q=80&auto=format",
+      "alt": "Matte white roller fabric texture"
+    }
+  ]
+}
