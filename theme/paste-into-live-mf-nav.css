@@ -1,0 +1,27 @@
+/* ---------- Moonflower: no menu underlines, no page dimming ---------- */
+
+/* Remove the dark layer over the page while the mega menu is open */
+.layout--viewport::after {
+  content: none;
+}
+
+@media (min-width: 640px) {
+  /* No underline under Shop / Rituals / Bundles (hover or open) */
+  .layout--viewport .header--root[data-hover-disabled] .x-menu--level-1--link .x-menu--level-1--text::before,
+  .layout--viewport .header--root[data-hover-disabled] .x-menu--level-1--link .x-menu--level-1--text::after {
+    content: none;
+    border: 0;
+  }
+
+  /* No drop shadow under the open panel; a hairline separates it instead */
+  .layout--viewport[data-drop-shadows] .header--root .x-menu--level-1--link[data-megamenu='true'] .x-menu--level-2--container {
+    box-shadow: none;
+    border-bottom: 1px solid var(--mf-line);
+  }
+}
+
+/* Mobile drawer: no underline on "View all" */
+.mf-dm__row--all .mf-dm__label {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
