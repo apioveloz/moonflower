@@ -1,0 +1,478 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "icon": "plant",
+            "text": "50% OFF skincare - Enter code SKNWKN",
+            "link": "",
+            "hide-on-desktop": false,
+            "hide-on-mobile": false,
+            "page-enabled": false,
+            "page-url": "",
+            "countdown-enabled": true,
+            "timer-bg-color": "dark",
+            "number-color": "white",
+            "expiry-date": "DD-MM-YYYY",
+            "expiry-hours": 0,
+            "expiry-minutes": 0,
+            "hide-when-expired": true
+          }
+        }
+      },
+      "block_order": [
+        "announcement"
+      ],
+      "settings": {
+        "border": "none",
+        "background-color": "accent-2",
+        "sticky-enabled": false,
+        "arrows-enabled": true,
+        "rotate-frequency": 7,
+        "show-social-icons": true,
+        "show-region-selector": true,
+        "show-locale-selector": true,
+        "text-color": "body",
+        "scroll-text": true,
+        "animation-speed": 3
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "shop_tile_1": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Face",
+            "link-url": "shopify://collections/skin",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_2": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Hair",
+            "link-url": "shopify://collections/hair",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_3": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Body & Bath",
+            "link-url": "shopify://collections/body",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_4": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Soap Bars",
+            "link-url": "shopify://collections/cold-process-soap-bars",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_5": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Oils & Salves",
+            "link-url": "shopify://collections/oils-salves",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_6": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Outdoors",
+            "link-url": "shopify://collections/outdoors",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_7": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Bestsellers",
+            "link-url": "shopify://collections/best-sellers",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_8": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image": "shopify://shop_images/1UYB2ikT3JpljjZd2yibr2qoZe7HQHu9f_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Cleansing Balm",
+            "link-url": "shopify://products/maracuya-cleansing-balm",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_9": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image": "shopify://shop_images/1ao04aYbbSc0ZuZBHnvNclBI5_M9X6VAx_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Lip Balm",
+            "link-url": "shopify://products/lip-balm",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_10": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image": "shopify://shop_images/11OL3Eq5aobvftdRZXD1N63QooCG5Vr-t_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Deodorant",
+            "link-url": "shopify://products/natural-deodorant-sensitive-baking-soda-free",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "shop_tile_11": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Shop",
+            "image": "shopify://shop_images/19kOeXo2sFqq4Uqx0zEd8tquHonxDzAeL_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Sunscreen",
+            "link-url": "shopify://products/face-reef-safe-sunscreen-stick-spf-30",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_1": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1ubUfzKaBs64QKiLv4scT5VfyMBj4RJ_5_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Solid Shampoo",
+            "link-url": "shopify://products/solid-shampoo-restore-and-protect",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_2": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/19QKfyz2EeKcyfXwlkcYDdUGidPlIIUNZ_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Solid Conditioner",
+            "link-url": "shopify://products/solid-conditioner",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_3": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1-3ZU_jalefG3B_D808FkB6GXSU8hTwNs_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Leave-In Conditioner",
+            "link-url": "shopify://products/shea-and-baobab-leave-in-conditioner",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_4": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1VUEL5uapsV84kR9eBxi1EB_e1NzbcmUM_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Hair & Beard Oil",
+            "link-url": "shopify://products/jojoba-and-argan-hair-and-beard-oil-rosemary-and-bay-rum",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_5": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1jmi2GPnfw662FaPLfTskrel-iQANY8C9_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Cleansing Bar",
+            "link-url": "shopify://products/face-cleansing-bar-calendula-and-chamomile",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_6": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1jG6nkM0tbwCEprIS9uuXMpOS1wS_jMZ2_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Face Toner",
+            "link-url": "shopify://products/rose-and-tulsi-face-toner",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_7": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1oCIsfMIBcfXqN09BVYodLrHZbYKShfSl_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Face Serum",
+            "link-url": "shopify://products/face-serum",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_8": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1X8-bPfwi1TBgHHFH1EI5LBod_pBMzDZh_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Face Lotion",
+            "link-url": "shopify://products/face-lotion",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_9": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1MPkeQv_8qqC29LOuYhaidX3iUmTVLQwl_w2048_c7fbefe3-d2c2-42b0-8e3c-839c32ea63a1.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Soap Bar",
+            "link-url": "shopify://products/cold-process-soap-bar",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_10": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1L9-f-ebGBbwlisXUamOrn41opR1XsGL7_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Lotion Bar",
+            "link-url": "shopify://products/lotion-bar",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "rituals_tile_11": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Rituals",
+            "image": "shopify://shop_images/1xtYKYn_sWMN7Vdx2iE0qghz2pKAN56Kb_w2048.jpg",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 100,
+            "description": "Body Oil",
+            "link-url": "shopify://products/ylang-ylang-and-cardamom-body-oil",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 100
+          }
+        },
+        "bundles_tile_1": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Bundles",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 76,
+            "description": "Island essentials",
+            "link-url": "shopify://collections/body",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 126
+          }
+        },
+        "bundles_tile_2": {
+          "type": "image",
+          "settings": {
+            "menu-item": "Bundles",
+            "image-display-type": "aspect-ratio",
+            "aspect-ratio": 76,
+            "description": "Reef-safe & ready",
+            "link-url": "shopify://collections/outdoors",
+            "mobile-image-display-type": "aspect-ratio",
+            "mobile-aspect-ratio": 126
+          }
+        }
+      },
+      "block_order": [
+        "shop_tile_1",
+        "shop_tile_2",
+        "shop_tile_3",
+        "shop_tile_4",
+        "shop_tile_5",
+        "shop_tile_6",
+        "shop_tile_7",
+        "shop_tile_8",
+        "shop_tile_9",
+        "shop_tile_10",
+        "shop_tile_11",
+        "rituals_tile_1",
+        "rituals_tile_2",
+        "rituals_tile_3",
+        "rituals_tile_4",
+        "rituals_tile_5",
+        "rituals_tile_6",
+        "rituals_tile_7",
+        "rituals_tile_8",
+        "rituals_tile_9",
+        "rituals_tile_10",
+        "rituals_tile_11",
+        "bundles_tile_1",
+        "bundles_tile_2"
+      ],
+      "settings": {
+        "layout": "center-left",
+        "background-color": "none",
+        "sidebar-width": 244,
+        "white-menu-background": true,
+        "bottom-border": false,
+        "text-color": "body",
+        "hover-disabled": false,
+        "sticky-enabled": true,
+        "hide-on-scroll": true,
+        "reduce-height": true,
+        "overlap-behavior": "drawer",
+        "logo": "shopify://shop_images/moonflower-blck.png",
+        "logo-height": 32,
+        "mobile-logo-height": 22,
+        "transparent-enabled": false,
+        "transparent-text-color": "white",
+        "menu": "main-menu",
+        "show-region-selector": true,
+        "show-locale-selector": true,
+        "search-enabled": true,
+        "icons-enabled": true,
+        "highlight-item": "",
+        "highlight-color": "#ffe379",
+        "modal-item": "",
+        "modal-content": "",
+        "modal-background-color": "none",
+        "modal-text-color": "body"
+      }
+    },
+    "split-announcements": {
+      "type": "split-announcements",
+      "blocks": {
+        "store-message-1": {
+          "type": "store-message",
+          "settings": {
+            "icon": "none",
+            "heading": "Heading",
+            "description": "Description",
+            "link-url": ""
+          }
+        },
+        "store-message-2": {
+          "type": "store-message",
+          "settings": {
+            "icon": "none",
+            "heading": "Heading",
+            "description": "Description",
+            "link-url": ""
+          }
+        },
+        "store-message-3": {
+          "type": "store-message",
+          "settings": {
+            "icon": "none",
+            "heading": "Heading",
+            "description": "Description",
+            "link-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "store-message-1",
+        "store-message-2",
+        "store-message-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "home-page-only": true,
+        "border": "none",
+        "background-color": "none",
+        "text-color": "body",
+        "icon": "none",
+        "heading": "Heading",
+        "description": "Description",
+        "link-url": ""
+      }
+    },
+    "divider_MUWecf": {
+      "type": "divider",
+      "name": "Divider",
+      "settings": {
+        "border-enabled": false,
+        "white-border": false,
+        "spacing-above": "medium",
+        "spacing-below": "medium",
+        "container-width": "5",
+        "background-color": "none",
+        "mobile-full-width": false,
+        "mobile-spacing-above": "medium",
+        "mobile-spacing-below": "medium"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header",
+    "split-announcements",
+    "divider_MUWecf"
+  ]
+}
